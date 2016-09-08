@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
     <file source-language="en" target-language="cs" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="note">
@@ -18,7 +18,6 @@
                 <source>mit_license</source>
                 <target>MIT licence</target>
             </trans-unit>
-
             <trans-unit id="title.homepage">
                 <source>title.homepage</source>
                 <target><![CDATA[Vítejte v <strong>Symfony Demo</strong> aplikaci]]></target>
@@ -55,7 +54,6 @@
                 <source>title.comment_error</source>
                 <target>Při vytváření komentáře došlo k chybě</target>
             </trans-unit>
-
             <trans-unit id="action.show">
                 <source>action.show</source>
                 <target>Zobrazit</target>
@@ -108,7 +106,6 @@
                 <source>action.browse_admin</source>
                 <target>Přejít do administrace</target>
             </trans-unit>
-
             <trans-unit id="label.title">
                 <source>label.title</source>
                 <target>Název</target>
@@ -157,7 +154,6 @@
                 <source>action.edit_contents</source>
                 <target>Upravit příspěvek</target>
             </trans-unit>
-
             <trans-unit id="menu.toggle_nav">
                 <source>menu.toggle_nav</source>
                 <target>Přepnout navigaci</target>
@@ -182,7 +178,6 @@
                 <source>menu.logout</source>
                 <target>Odhlásit</target>
             </trans-unit>
-
             <trans-unit id="post.to_publish_a_comment">
                 <source>post.to_publish_a_comment</source>
                 <target>se pro přidání komentáře</target>
@@ -203,7 +198,6 @@
                 <source>post.no_posts_found</source>
                 <target>Nebyly nalezeny žádné příspěvky.</target>
             </trans-unit>
-
             <trans-unit id="help.app_description">
                 <source>help.app_description</source>
                 <target><![CDATA[Toto je <strong>demo aplikace</strong> vytvořena Symfony frameworkem s využitím doporučených způsobů vývoje Symfony aplikací.]]></target>
