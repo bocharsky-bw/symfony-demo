@@ -1,0 +1,17 @@
+version: '2'
+services:
+    app:
+        volumes_from:
+            - container:data:rw
+
+    fpm:
+        volumes_from:
+            - container:data:rw
+
+    nginx:
+        volumes_from:
+            - container:data:rw
+
+volumes:
+    data:
+        external: true

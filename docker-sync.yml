@@ -1,0 +1,12 @@
+options:
+    #compose-file-path: './docker-compose/docker-compose.yml'
+    compose-dev-file-path: './docker-compose-dev.yml'
+    verbose: true
+
+syncs:
+    data:
+        src: './'
+        dest: '/srv'
+        sync_args: '--delete'
+        sync_strategy: 'rsync'
+        sync_host_port: 10872
