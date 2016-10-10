@@ -1,16 +1,14 @@
 options:
-    #compose-file-path: './docker-compose/docker-compose.yml'
-    compose-dev-file-path: './docker-compose-dev.yml'
     verbose: true
 
 syncs:
     data:
-        src: './'
+        src: '.'
         dest: '/srv'
         sync_strategy: 'unison'
         sync_host_port: 10873
-#        sync_user: 'www-data'
         sync_userid: '33'
-#        sync_group: 'www-data'
-#        sync_groupid: '33'
+        #sync_user: 'www-data'
+        #sync_groupid: '33'
+        #sync_group: 'www-data'
         sync_args: '-prefer newer -copyonconflict'
