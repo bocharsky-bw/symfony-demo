@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(), // used for initial population of non-SQLite databases in production envs
             // uncomment the following line if your application sends emails
             // new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle(),
         ];
 
         // Some bundles are only used while developing the application or during
@@ -34,7 +35,6 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
         }
 
         return $bundles;
