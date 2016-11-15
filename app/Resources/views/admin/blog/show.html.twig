@@ -8,6 +8,16 @@
     <table class="table">
         <tbody>
             <tr>
+                <th scope="row">Image</th>
+                <td>
+                    {% if post.imagePathname %}
+                        <img src="{{ asset('uploads/images/'~post.imagePathname) }}" style="max-width: 200px; max-height: 150px">
+                    {% else %}
+                        No image
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
                 <th scope="row">{{ 'label.summary'|trans }}</th>
                 <td>{{ post.summary|md2html }}</td>
             </tr>

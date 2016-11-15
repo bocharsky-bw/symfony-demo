@@ -14,6 +14,7 @@ namespace AppBundle\Form;
 use AppBundle\Entity\Post;
 use AppBundle\Form\Type\DateTimePickerType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -59,6 +60,7 @@ class PostType extends AbstractType
             ->add('publishedAt', DateTimePickerType::class, [
                 'label' => 'label.published_at',
             ])
+            ->add('image_file', FileType::class)
         ;
     }
 

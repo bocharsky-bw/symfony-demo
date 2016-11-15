@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -96,6 +97,20 @@ class Post
      * @ORM\OrderBy({"publishedAt" = "DESC"})
      */
     private $comments;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $imagePathname;
+
+    /**
+     * @var UploadedFile
+     *
+     * @Assert\File(mimeTypes={"image/jpeg", "image/png", "image/gif"})
+     */
+    private $imageFile;
 
     public function __construct()
     {
@@ -205,5 +220,37 @@ class Post
     public function setSummary($summary)
     {
         $this->summary = $summary;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImagePathname()
+    {
+        return $this->imagePathname;
+    }
+
+    /**
+     * @param string $imagePathname
+     */
+    public function setImagePathname($imagePathname)
+    {
+        $this->imagePathname = $imagePathname;
+    }
+
+    /**
+     * @return UploadedFile
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param UploadedFile $imageFile
+     */
+    public function setImageFile(UploadedFile $imageFile)
+    {
+        $this->imageFile = $imageFile;
     }
 }

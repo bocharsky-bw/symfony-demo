@@ -18,6 +18,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -153,6 +154,12 @@ class BlogController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            /** @var UploadedFile $file */
+            $file = $post->getImageFile();
+            $pathname = $this->get('file_uploader')
+                ->upload($file);
+            $post->setImagePathname($pathname);
+
             $post->setSlug($this->get('slugger')->slugify($post->getTitle()));
             $entityManager->flush();
 
