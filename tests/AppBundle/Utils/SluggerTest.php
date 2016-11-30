@@ -30,6 +30,8 @@ class SluggerTest extends \PHPUnit_Framework_TestCase
      */
     public function testSlugify($string, $slug)
     {
+        $this->assertTrue(false); // trigger failed build on Heroku
+
         $slugger = new Slugger();
         $result = $slugger->slugify($string);
 
